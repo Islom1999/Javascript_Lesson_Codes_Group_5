@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.toogle{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    top: 50px;
+    right: 16.66%;
+}
+.toggle-item{
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    transition: .5s;
+}
+.toggle-item.active{
+    left: 100px;
+    opacity: 0;
+}
+.toogle::before{
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 10%;
+    background-color: black;
+    transition: .5s;
+}
+.toogle.active::before{
+    transform-origin: left;
+    transform: rotate(45deg);
+}
+.toogle::after{
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 10%;
+    background-color: black;
+    transition: .5s;
+}
+.toogle.active::after{
+    transform-origin: left;
+    transform: rotate(-45deg);
+}
+.nav-res{
+    width: 40%;
+    height: 100vh;
+    background-color: turquoise;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: .5s;
+    z-index: 10;
+}
+.nav-res.active{
+    left: 0%;
+}
+
+.accor-item{
+    height: 70px;
+    overflow: hidden;
+    transition: .5s;
+}
+.accor-item.active{
+    height: 220px;
+}
+
+.accor-title{
+    height: 70px;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+.accor-body{
+    height: 150px;
+    overflow: hidden;
+    transition: height .5s;
+    border: 1px solid black;
+
+}
+img{
+    width: 100%;
+}
+
+/* Add numbers to pagination buttons by CSS */
+
+
+
+
+
+

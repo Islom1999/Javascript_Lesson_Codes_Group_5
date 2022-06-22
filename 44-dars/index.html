@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="splide-4.0.7/dist/css/splide.min.css">
+</head>
+<body>
+    <!--
+      <div class="accor container">
+        <div class="accor-item">
+            <div class="accor-title">nomi</div>
+            <div class="accor-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptas maiores. Porro dolore amet quod maxime architecto quaerat quidem. Similique numquam placeat laborum voluptatem repellendus maxime quae nesciunt assumenda commodi!</p>
+            </div>
+        </div>
+        <div class="accor-item">
+            <div class="accor-title">nomi</div>
+            <div class="accor-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptas maiores. Porro dolore amet quod maxime architecto quaerat quidem. Similique numquam placeat laborum voluptatem repellendus maxime quae nesciunt assumenda commodi!</p>
+            </div>
+        </div>
+        <div class="accor-item">
+            <div class="accor-title">nomi</div>
+            <div class="accor-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptas maiores. Porro dolore amet quod maxime architecto quaerat quidem. Similique numquam placeat laborum voluptatem repellendus maxime quae nesciunt assumenda commodi!</p>
+            </div>
+        </div>
+      </div>
+      -->
+
+      <div class="splide" role="group" aria-label="Splide Basic HTML Example" id="#thumbnail-slider">
+        <div class="splide__track">
+              <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="1.jpg" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="2.jpg" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="3.jpg" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="1.jpg" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="2.jpg" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="3.jpg" alt="">
+                  </li>
+              </ul>
+        </div>
+      </div>
+
+      <script src="splide-4.0.7/dist/js/splide.min.js"></script>
+      <script>
+        var main = new Splide( '#main-slider', {
+  type       : 'fade',
+  heightRatio: 0.5,
+  pagination : false,
+  arrows     : false,
+  cover      : true,
+} );
+
+var thumbnails = new Splide( '#thumbnail-slider', {
+  rewind          : true,
+  fixedWidth      : 104,
+  fixedHeight     : 58,
+  isNavigation    : true,
+  gap             : 10,
+  focus           : 'center',
+  pagination      : false,
+  cover           : true,
+  dragMinThreshold: {
+    mouse: 4,
+    touch: 10,
+  },
+  breakpoints : {
+    640: {
+      fixedWidth  : 66,
+      fixedHeight : 38,
+    },
+  },
+} );
+
+main.sync( thumbnails );
+main.mount();
+thumbnails.mount();
+      </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
